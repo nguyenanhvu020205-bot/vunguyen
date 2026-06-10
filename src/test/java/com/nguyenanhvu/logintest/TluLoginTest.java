@@ -59,7 +59,7 @@ public class TluLoginTest {
     @DisplayName("Login Account 2")
     public void testLoginAccount2() {
         System.out.println("Running: Login Account 2");
-        performLogin("2351067121", "anhhaovu");
+        performLogin("2351067121", "02022001");
     }
 
     private void performLogin(String username, String password) {
