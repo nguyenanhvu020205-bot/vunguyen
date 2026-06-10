@@ -1,6 +1,8 @@
 package com.nguyenanhvu.logintest;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
+import java.time.Duration;
+import java.util.List;
+
 import org.junit.jupiter.api.AfterAll;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.DisplayName;
@@ -14,8 +16,7 @@ import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import java.time.Duration;
-import java.util.List;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TluLoginTest {
 
@@ -58,7 +59,7 @@ public class TluLoginTest {
     @DisplayName("Login Account 2")
     public void testLoginAccount2() {
         System.out.println("Running: Login Account 2");
-        performLogin("2351067121", "passanh");
+        performLogin("2351067121", "anhhaovu");
     }
 
     private void performLogin(String username, String password) {
