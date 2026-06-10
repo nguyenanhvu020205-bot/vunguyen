@@ -1,0 +1,32 @@
+name: TLU Login Account 1
+run-name: Check Login Account 1
+
+on:
+  push:
+    branches: [main, develop, "feature/**", "fix/**"]
+  pull_request:
+    branches: [main, develop]
+  workflow_dispatch:
+
+jobs:
+  login-account-1:
+    name: Check Account 1
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: "17"
+          distribution: temurin
+          cache: maven
+
+      - name: Install Chrome
+        uses: browser-actions/setup-chrome@v1
+
+      - name: Check Login Account 1
+        run: mvn test -Dtest=com.nguyenanhvu.logintest.TluLoginTest#testLoginAccount1
+        env:
+          CI: true
